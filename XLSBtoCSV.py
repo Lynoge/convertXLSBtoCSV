@@ -8,7 +8,7 @@ from pyxlsb import open_workbook
 # Inicia Leitura dos arquivos contidos no diretorio
 files = []
 nomesheet = []
-files = (glob.glob(caminhoxlsb+'*.xlsb'))
+files = (glob.glob('*.xlsb'))
 filesSize = len((glob.glob('*.xlsb')))
 i = 0
 print('Processo Iniciado')
