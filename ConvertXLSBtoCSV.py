@@ -8,8 +8,6 @@ from pyxlsb import open_workbook
 # Inicia Leitura dos arquivos contidos no diretorio
 files = []
 nomesheet = []
-caminhoxlsb = '../Carregar/'
-caminhocsv = '/Users/administrator.WCLAB/Documents/Gerenciamento de Contratos Pack 4/'
 files = (glob.glob(caminhoxlsb+'*.xlsb'))
 filesSize = len((glob.glob('*.xlsb')))
 i = 0
@@ -24,12 +22,7 @@ for filesSize in files:
                     writer.writerow([c.v for c in row])
             # pega o nomesheet do csv
             nomesheet = (name + '.csv')
-            print(nomesheet + ' Convertido com Sucesso!')
-            # Move os arquivos csv criados
-            #shutil.move(nomesheet,caminhocsv + 'Arquivos')
-    # Move todos os arquivos xlsb
-    #shutil.move(files[i],caminhoxlsb + 'Lidos')
-    
+            print(nomesheet + ' Convertido com Sucesso!')    
     i+=1
 
 print(f'Processo Finalizado! {i} Arquivos Convertidos ')
